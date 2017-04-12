@@ -25,4 +25,4 @@ To edit the bibtex corresponding to a reference, use `bibi edit ref_name`. This
 will load the bibtex in `$(EDITOR)`.
 
 To takes notes (in markdown) on a reference, use `bibi notes ref_name`. The
-notes file will be stored under `nots/ref_name.md`.
+notes file will be stored under `notes/ref_name.md`.
