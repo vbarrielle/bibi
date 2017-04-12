@@ -1,0 +1,5 @@
+# OASIS_START
+# OASIS_STOP
+
+true: bin_annot, no_alias_dep, use_menhir, color(always), optimize(3)
+<src/**/*.ml>: warn(+a-4-42-44-48-50-58-32-60@8)

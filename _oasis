@@ -1,0 +1,20 @@
+OASISFormat: 0.4
+Name:        bibi
+Version:     dev
+Homepage:    https://github.com/vbarrielle/bibi
+Authors:     Vincent Barrielle, Simon Cruanes
+License:     MIT
+LicenseFile: LICENSE
+Plugins:     META (0.3), DevFiles (0.3)
+OCamlVersion: >= 4.01.0
+BuildTools:  ocamlbuild
+AlphaFeatures: compiled_setup_ml, ocamlbuild_more_args
+
+Synopsis:    Tool to manage academic bibliographies
+
+Executable bibi
+  Path:             src/
+  CompiledObject:   best
+  MainIs:           bibi.ml
+  BuildDepends:     containers, cmdliner, sha
+
