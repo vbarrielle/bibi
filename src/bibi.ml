@@ -50,8 +50,8 @@ let () =
   let terms = [term_list; term_init] in
   begin match Cmdliner.Term.eval_choice help terms with
     | `Version | `Help | `Error `Parse | `Error `Term | `Error `Exn -> exit 2
-    | `Ok (Ok ()) -> ()
-    | `Ok (Error e) ->
+    | `Ok (E.Ok ()) -> ()
+    | `Ok (E.Error e) ->
       print_endline ("error: " ^ e);
       exit 1
   end
