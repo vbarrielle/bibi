@@ -1,9 +1,15 @@
 
 module E = CCResult
+module B = Bibtex
 
 module Cmd_list = struct
+  (* TODO: parametrize by file name? *)
+
   let run () =
-    print_endline "list"; (* TODO: parse bibtex file, print list of entries *)
+    let open E.Infix in
+    B.parse_file "biblio.bib" >>= fun b ->
+    Format.printf "@[<v>%a@]@."
+      CCFormat.(list string) (B.to_list b |> List.map fst);
     E.return ()
 end
 
